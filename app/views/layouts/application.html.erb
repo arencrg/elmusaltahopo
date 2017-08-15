@@ -12,31 +12,35 @@
 
 </head>
 <body>
- 
-<div class = "container">
   
-  <nav class="navbar navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-       <span class="caret"></span>
-      </button>
-      <%= link_to image_tag("https://image.flaticon.com/icons/svg/123/123276.svg", id:"logo"), root_path %>
-    </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-            <li><%= link_to "Dashboard", current_user, :class => 'navbar-link'  %></li>
-            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </li>
+ <div class="navbar navbar-fixed-top" role="navigation" id="slide-nav">
+  <div class="container">
+   <div class="navbar-header">
+    <a class="navbar-toggle"> 
+      <span class="sr-only">Toggle navigation</span>
+          <img src = "https://image.flaticon.com/icons/svg/258/258907.svg" id="logo"/>
+    </a>
+   </div>
+   <div id="slidemenu">
+        <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "Home", root_path, :class => 'navbar-link' %></li>
+              <li><a href = "#about" class = "navbar-link" >Who is El Musal and what is Taho Po?</a></li>
+              <li><a href = "#contact" class = "navbar-link" >Contact Us</a></li>
+          <% if user_signed_in? %>
+              <li><%= link_to "Dashboard", current_user, :class => 'navbar-link'  %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </li>
           <% else %>
-            <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> </li>
+              <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link' %></li>
           <% end %>
-      </ul>
-    </div>
+        </ul>
+          
+   </div>
   </div>
-</nav>
+ </div>
+
+ 
+<div class = "container" id="page-content">
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

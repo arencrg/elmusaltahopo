@@ -1,11 +1,16 @@
-<h1>Welcome!</h1>
+<div id = "home">
+  
+  
+<img src="https://preview.ibb.co/ia41Ba/elmusal_lightblue.png" alt="elmusal_lightblue" border="0" id="landingimg">
 
+    <h1>Welcome!</h1>
 
+<div class = "infostuff">
 <p>What do you want to do?</p>
-
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum cursus urna. In vitae interdum nisl. Aliquam tempus pharetra mi a cursus. Nullam placerat non nibh ut convallis. Maecenas dapibus porttitor augue elementum pulvinar. Aliquam ullamcorper eget orci vel facilisis. Pellentesque vitae viverra ante. Sed varius magna scelerisque orci sagittis, eget tempor metus facilisis. Nam orci tortor, sodales et luctus eu, mollis sit amet nisl. Nam eu lacinia mi, id mattis mauris. Mauris aliquam, lectus a pretium sagittis, purus ligula aliquam nisi, in interdum erat ex ac orci. Nullam ullamcorper porta odio, quis tincidunt diam placerat maximus. Donec at egestas sem, nec dignissim urna. Sed molestie ut quam in vestibulum. Sed eu tincidunt tortor. In laoreet tortor vel mauris hendrerit, ac aliquam felis condimentum.
 <br/>
-<% if user_signed_in? %>
-<%= link_to "Let me set my delivery address so I can have taho!", edit_user_registration_path %><br/>
-<% else %>
-<%= link_to "Where do I begin?", new_user_registration_path %><br/>
-<% end %>
+</div>
+
+<%= link_to "I want some taho!", new_user_registration_path, id:"iwant" %><br/>
+
+</div>

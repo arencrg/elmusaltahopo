@@ -4,16 +4,21 @@
 <%= current_user.name %>
 <%= current_user.contact %>
 <%= current_user.location %>
-
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@user.latitude}%2C#{@user.longitude}" %>
+<%= link_to "Let me set my delivery address so I can have taho!", edit_user_registration_path %>
 
         <h3>Nearby Taho Sellers</h3>
         
         <% for user in @user.nearbys(10) %>
             <% if user.role == "seller" %>
+              <% my_url = "http://maps.google.com/maps/api/staticmap?size=400x500&sensor=false&zoom=15&markers=color:red|#{@user.latitude}%2C#{@user.longitude}&markers=color:green" %>
+              <% my_url += "|#{user.latitude}%2C#{user.longitude}" %> 
+             <%= image_tag my_url %>
               <%= user.name %>,  <%= user.distance.round(2) %> km <br/>
-            <% else %>
-                Oops, there are none!
             <% end %>
             
+            
         <% end %>
+
+
+
+  

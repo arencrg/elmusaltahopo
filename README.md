@@ -1,24 +1,24 @@
+#TAHO PO BY EL MUSAL
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+El Musal is the result my week-long fever dream of owning a breakfast-first (and -only) food service, and Taho Po! is the first product from the lineup.
 
 
-Welcome to your Rails project on Cloud9 IDE!
+This app/website is the final project of Term2 in the Vivixx Coding Bootcamp. It is to be pitched in front of Investors on Aug 17 2017. The whole project will take about a week for planning, coding, and designing.
 
-To get started, just do the following:
+Conceptualization started on Aug 11 2017, however the actual code started on Aug 15 2017 as I had planning issues with my absentee partner. (He has since made it up to me, kinda.
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://HOSTNAME/).
+You can view the wireframe here: https://www.figma.com/file/bcgxR7itxJUM9qYjq8IzWUaU/Taho-Po?node-id=10%3A0
 
-Happy coding!
-The Cloud9 IDE team
+## TIMELINE
 
+- Aug 11 2017 - The project pairings were announced. Rodolf has been absent a lot lately, so I haven't been able to do much...
 
-## Support & Documentation
+- Aug 15 2017 - FINALLY, REAL CODE!!!
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+## TO DO
+
+- Functionality still a bit lacking, please fix
+
+- Database/Calendar View for the seller still isn't up, please finish before pitch!
+
+- Presentation is in Rodolf's to-do, however I'm still a little iffy about letting him work on it. Will update eventually.

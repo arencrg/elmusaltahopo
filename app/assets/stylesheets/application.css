@@ -13,8 +13,280 @@
  *= require_tree .
  *= require_self
  */
+ 
+ /* adjust body when menu is open */
+ 
+    body {
+        margin: 0;
+        padding: 0;
+        background: #20C0D3;
 
+    }
+    
+    
+body.slide-active {
+    overflow-x: hidden;
+}
+/*first child of #page-content so it doesn't shift around*/
+.no-margin-top {
+    margin-top: 0px!important;
+}
+/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
+#page-content {
+    position: relative;
+    padding-top: 70px;
+    left: 0;
+    background: #20C0D3;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 100px;
+}
+#page-content.slide-active {
+    padding-top: 0
+}
+
+/* put toggle bars on the left :: not using button */
+#slide-nav .navbar-toggle {
+    cursor: pointer;
+    position: relative;
+    line-height: 0;
+    float: left;
+    margin: 0;
+    width: 30px;
+    height: 50px;
+    padding: 10px 10px 0 10px;
+    border: 0;
+    color: black;
+}
+/* icon bar prettyup - optional */
+#slide-nav .navbar-toggle > .icon-bar {
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin: 5px 0 0 0;
+     color: black;
+}
+#slide-nav .navbar-toggle.slide-active {
+    background: inherit;
+}
+.navbar-header {
+    position: relative;
+}
+
+
+a, a:hover, a:active, a:visited {
+    background: inherit;
+    color: inherit;
+    text-decoration: none;
+}
 
 #logo {
-    height: 20px;
+    height: 40px;
+}
+
+#iwant {
+    font-size: 20px;
+    text-transform: uppercase;
+    border: solid white 4px;
+    border-radius: 30px;
+    padding: 20px 20px 20px 20px;
+    margin: 40px 20px 20px 20px;
+}
+
+.infostuff {
+    padding: 10px 4% 10px 4%;
+    margin-bottom: 20px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+@media (max-width:767px) { 
+    
+        body {
+        margin: 0;
+        padding: 0;
+        background: #20C0D3;
+    }
+    
+    a, a:hover, a:active, a:visited {
+    background: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+    
+	#slide-nav .container {
+	    margin: 0!important;
+	    padding: 0!important;
+        height:100%;
+	}
+	#slide-nav .navbar-header {
+	    margin: 0 auto;
+	    padding: 0 15px;
+	}
+	#slide-nav .navbar.slide-active {
+	    position: absolute;
+	    width: 80%;
+	    top: -1px;
+	    z-index: 1000;
+	    background: inherit;
+	}
+	#slide-nav #slidemenu {
+	    background: black;
+	    left: -100%;
+	    width: 80%;
+	    min-width: 0;
+	    position: absolute;
+	    padding-left: 0;
+	    z-index: 2;
+	    top: -8px;
+	    margin: 0;
+	}
+	#slide-nav #slidemenu .navbar-nav {
+	    min-width: 0;
+	    width: 100%;
+	    margin: 0;
+	    background: black;
+	    height: 100%;
+	}
+	#slide-nav #slidemenu .navbar-nav li a {
+	    min-width: 0;
+	    width: 90%;
+        background: black;
+	   
+	}
+	
+	#slidemenu li {
+    padding: 40px 10px 10px 10px;
+    line-height: 110%
+	}
+	
+	#slide-nav {
+	    border-top: 0
+	}
+	#slide-nav.navbar #slidemenu {
+	    background: white;
+	}
+
+	#slide-nav .navbar-form {
+	    width: 100%;
+	    margin: 8px 0;
+	    text-align: center;
+	    overflow: hidden;
+	    /*fast clearfixer*/
+	}
+	#slide-nav .navbar-form .form-control {
+	    text-align: center
+	}
+	#slide-nav .navbar-form .btn {
+	    width: 100%
+	}
+	#slidemenu {
+        background: black;
+        max-height: 100%;
+	}
+	
+	
+		#navbar-height-col {
+	    position: fixed;
+	    top: 0;
+	    height: 100%;
+      bottom:0;
+	    width: 80%;
+	    left: -80%;
+	    background: black;
+	}
+
+    
+#logo {
+    height: 70px;
+    background: white;
+    padding: 12px 12px 12px 12px;
+    border-radius: 40px;
+}
+
+.navbar-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 40px 0 30px 10px;
+    line-height: 160%
+}
+    
+#landingimg {
+    width: 100%;
+    margin: 50px 0 100px 0;
+}
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:768px) { 
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background: #20C0D3;
+    }
+    
+	#page-content {
+	    left: 0!important
+	    width: 100%;
+
+	}
+	.navbar.navbar-fixed-top.slide-active {
+	    position: fixed
+	}
+	.navbar-header {
+	    left: 0!important
+	    background: black;
+	    z-index: 99;
+	}
+	
+	.navbar {
+	    height: 55px;
+	    background-color: white;
+	    z-index: 999;
+	}
+	
+	.navbar-link a:hover, li:hover {
+    border-bottom: black solid 5px;
+    margin-bottom: 0;
+    color: white;
+	}
+	
+	
+	a, a:hover, a:visited, a:active {
+	    color: inherit;
+	    text-decoration: none;
+	}
+	
+	    
+#landingimg {
+    max-width: 60% !important;
+    margin: -40px 20% 20px 20%;
+}
+    
 }
