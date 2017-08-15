@@ -1,0 +1,11 @@
+<h1>Welcome!</h1>
+
+
+<p>What do you want to do?</p>
+
+<br/>
+<% if user_signed_in? %>
+<%= link_to "Let me set my delivery address so I can have taho!", edit_user_registration_path %><br/>
+<% else %>
+<%= link_to "Where do I begin?", new_user_registration_path %><br/>
+<% end %>

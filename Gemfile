@@ -50,3 +50,5 @@ end
 
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'rails_db'
+gem 'geocoder'
