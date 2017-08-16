@@ -73,8 +73,7 @@ $(document).ready(function () {
         if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
             $(selected).removeClass('slide-active');
         }
-
-
+        
     });
 
 
