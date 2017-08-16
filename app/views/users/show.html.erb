@@ -2,18 +2,27 @@
 <h1>DASHBOARD</h1>
 <hr>
 <br/>
-<div class = "row">
-<div class = "col-xs-12 col-sm-12 col-lg-3 col-xl-3">
+<div class = "row" id="dashinfo">
+<div class = "col-xs-12 col-sm-12 col-lg-3 col-xl-3" id="profilepart">
 <h4>My Profile</h4>
-<%= image_tag(current_user.avatar) %> <br/>
-<%= current_user.name %> <br/>
-<%= current_user.contact %> <br/>
-<%= current_user.location %> <br/> <br/>
+<%= image_tag avatar_url(current_user), id:"profpic" %> <br/><br/>
+<p>NAME: <%= current_user.name %> <br/></p>
 
-<%= link_to "Set/Update my delivery address", edit_user_registration_path %>
+<p>CONTACT NO: <%= current_user.contact %> <br/></p>
+
+<p>ADDRESS: 
+<% if current_user.location == "" %>
+ <p>*Please update your profile to add your address for delivery!</p>
+  <%= link_to "UPDATE MY PROFILE", edit_user_registration_path %>
+<% else %> 
+   <%= current_user.location %> <br/>
+<% end %>
+</p>
+
+<p>Set delivery schedule</p>
+<input id="delidates" class="forminput">
+<br/>
 </div>
-
-
 
 <div class = "col-xs-12 col-sm-12 col-lg-4 col-xl-4">
 <h4>Nearby Taho Sellers</h4>
@@ -41,3 +50,15 @@
 </div>
 </div>
   
+
+<script>
+
+$(document).ready(function () {
+$('#delidates').multiDatesPicker({
+  maxPicks: 7,
+	minDate: 2,
+	maxDate: 16
+    });
+});
+
+</script>

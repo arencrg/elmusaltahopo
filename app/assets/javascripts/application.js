@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery-ui.multidatespicker
 
 
 $(document).ready(function () {
@@ -77,6 +78,18 @@ $(document).ready(function () {
     });
 
 
+});
 
 
+ $(function() {
+     $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 1000);
+        return false;
+     });
+});
+
+$(window).on('load', function() {
+  $(".se-pre-con").fadeOut("slow");;
 });
